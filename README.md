@@ -1,6 +1,6 @@
 # Matrix-Fisher-Distribution
 
-The matrix Fisher distribution is a compact form of an exponential density model developed for random matrices [[1]](#Mar). This repository contains Matlab files to perform various stochastic analyses for the matrix Fisher distribution on the special orthogonal group SO(3). 
+The matrix Fisher distribution is a compact form of an exponential density model developed for random matrices [[1]](#Mar). This repository contains Matlab files to perform various stochastic analyses and attitude estimation for the matrix Fisher distribution on the special orthogonal group SO(3). 
 
 The mathematical fomulation of the presented algorithms are available at the following paper:
 
