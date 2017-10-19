@@ -27,7 +27,7 @@ test_pdf_MF.m : test functions
 est_MF.m : attitude estimation
 ```
 ## Instaling and test
-Download all of the m files into a folder. Run 'test_pdf_MF', and the results should be similar as
+Download all of the `m` files into a folder. Run `test_pdf_MF` in the Matlab workspace, and the results should be similar as
 
 ```>> test_pdf_MF
 check:c_bar    1.1543e-16
@@ -38,7 +38,7 @@ check:M2       8.0138e-16
 check:M2S      1.2266e-15
 check:UT       1.2542e-15
 check:invUT    8.9461e-14
-'''
+```
 
 ## Author
  - Taeyoung Lee, [Flight Dynamics and Control Lab](http://fdcl.seas.gwu.edu/), George Washington University 
