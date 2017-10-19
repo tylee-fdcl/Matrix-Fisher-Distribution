@@ -6,6 +6,7 @@ The mathematical fomulation of the presented algorithms are available at the fol
 
 - T. Lee, ["*Bayesian Attitude Estimation with the Matrix Fisher Distribution on SO(3)*"](https://arxiv.org/abs/1710.03746/) 	arXiv:1710.03746, 2017
 
+## List of Functions
 
 ```pdf_MF.m : compute the probability density
 pdf_MF_normal.m : compute the normalizing constant
