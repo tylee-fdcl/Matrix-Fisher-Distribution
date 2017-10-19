@@ -15,10 +15,16 @@ pdf_MF_normal_deriv.m : compute the derivatives of the normalizing constant
 pdf_MF_moment.m : compute the moment
 pdf_MF_M2S.m : convert the first moment into the proper singular values
 
+pdf_MF_sampling.m : generate sample attitudes
+
 pdf_MF_unscented_transform.m : perform the unscented transform
 pdf_MF_inv_unscented_transform.m : perform the inverse unscented transform
 
 psvd.m : perform proper singular value decomposition
+
+test_pdf_MF.m : test functions
+
+est_MF.m : attitude estimation
 ```
 
 ## Author
