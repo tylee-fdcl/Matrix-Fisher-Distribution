@@ -2,6 +2,17 @@
 
 The matrix Fisher distribution is a compact form of an exponential density model developed for random matrices [[1]](#Mar). This repository contains Matlab files to perform various stochastic analyses for the matrix Fisher distribution on the special orthogonal group SO(3). 
 
+latexImg = function(latex){
+
+    link = paste0('http://latex.codecogs.com/gif.latex?',
+           gsub('\\=','%3D',URLencode(latex)))
+
+    link = gsub("(%..)","\\U\\1",link,perl=TRUE)
+    return(paste0('![](',link,')'))
+}
+
+r latexImg('a = \\frac{b}{c}')
+
 $p(R)=\frac{1}{c(S)}$
 The mathematical fomulation of the presented algorithms are available at the following paper:
 
