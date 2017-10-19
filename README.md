@@ -6,6 +6,17 @@ The mathematical fomulation of the presented algorithms are available at the fol
 
 - T. Lee, ["*Bayesian Attitude Estimation with the Matrix Fisher Distribution on SO(3)*"](https://arxiv.org/abs/1710.03746/) 	arXiv:1710.03746, 2017
 
+
+'pdf_MF.m
+pdf_MF_M2S.m
+pdf_MF_deriv.m
+pdf_MF_inv_unscented_transform.m
+pdf_MF_moment.m
+pdf_MF_normal.m
+pdf_MF_normal_deriv.m
+pdf_MF_unscented_transform.m
+psvd.m'
+
 ## References
 1.  <a name="Mar">K. Mardia and P. Jupp, *Directional Statistics,* Wiley, 1999.</a>
 
