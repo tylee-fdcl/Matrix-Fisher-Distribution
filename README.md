@@ -27,7 +27,7 @@ test_pdf_MF.m : test the package
 est_MF.m : attitude estimation
 ```
 ## Instaling and test
-Download all of the `m` files into a folder. Run `test_pdf_MF` in the Matlab workspace, and the results should be similar as follows.
+Download all of the `m` files into a folder. Run `test_pdf_MF` in the Matlab workspace, and the results should be as follows.
 
 ```>> test_pdf_MF
 check:c_bar    1.1543e-16
