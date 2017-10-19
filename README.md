@@ -22,7 +22,7 @@ pdf_MF_inv_unscented_transform.m : perform the inverse unscented transform
 
 psvd.m : perform proper singular value decomposition
 
-test_pdf_MF.m : test functions
+test_pdf_MF.m : test the package
 
 est_MF.m : attitude estimation
 ```
