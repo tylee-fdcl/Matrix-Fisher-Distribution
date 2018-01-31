@@ -52,7 +52,7 @@ while nf > eps && NITER < MAX_ITER
     lambda_stack=stack3(lambda_stack,lambda);
     
     % polynomial line search: three-point parabolic method
-    NSUB_ITER=0;
+    N_SUBITER=0;
     
     while norm(f_stack(end)) > (1-alpha*lambda)*norm(f) && NSUB_ITER < MAX_ITER 
         
