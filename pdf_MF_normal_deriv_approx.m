@@ -22,6 +22,8 @@ function dc_out=pdf_MF_normal_deriv_approx(s,type_approx,bool_scaled)
 %   Distribution on SO(3)", 2017, http://arxiv.org/abs/1710.03746,
 %   also T. Lee, "Bayesian Attitude Estimation with Approximate Matrix
 %   Fisher Distributions on SO(3)", 2018
+%
+%   See also PDF_MF_NORMAL_DERIV
 
 assert(or(min(size(s)==[1 3]),min(size(s)==[3 1])),'ERROR: s should be 3 by 1 or 1 by 3');
 assert(or(type_approx==1,type_approx==0),'ERROR: type_approx should be 0 or 1');

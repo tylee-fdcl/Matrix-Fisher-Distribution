@@ -17,6 +17,8 @@ function s=pdf_MF_M2S_approx(d,type_approx)
 %   Distribution on SO(3)", 2017, http://arxiv.org/abs/1710.03746,
 %   also T. Lee, "Bayesian Attitude Estimation with Approximate Matrix
 %   Fisher Distributions on SO(3)", 2018
+%
+%   See also PDF_MF_M2S
 
 assert(or(min(size(d)==[1 3]),min(size(d)==[3 1])),'ERROR: d should be 3 by 1 or 1 by 3');
 assert(or(type_approx==1,type_approx==0),'ERROR: type_approx should be 0 or 1');

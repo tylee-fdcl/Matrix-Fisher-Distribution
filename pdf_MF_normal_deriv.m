@@ -32,7 +32,8 @@ function varargout=pdf_MF_normal_deriv(s,bool_ddc,bool_scaled)
 %
 %   See T. Lee, "Bayesian Attitude Estimation with the Matrix Fisher
 %   Distribution on SO(3)", 2017, http://arxiv.org/abs/1710.03746
-
+%
+%   See also PDF_MF_NORMAL_DERIV_APPROX
 
 if nargin < 3
     bool_scaled = false;
