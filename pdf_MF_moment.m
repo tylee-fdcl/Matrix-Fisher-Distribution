@@ -7,7 +7,7 @@ function varargout=pdf_MF_moment(s,bool_M2)
 %
 %   To obtain the 3x3 first moment for an arbitrary matrix parameter F, run 
 %       [U S V]=psvd(F);
-%       M1=U*pdf_MF_normal(diag(S))*V';
+%       M1=U*diag(pdf_MF_moment(diag(S)))*V';
 %
 %   BOOL_M2 determines whether the second order canonical moments
 %   are computed or not:

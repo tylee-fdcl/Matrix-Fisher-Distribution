@@ -6,10 +6,11 @@ function [R accept_ratio]=pdf_MF_sampling(F,N)
 %   See T. Lee, "Bayesian Attitude Estimation with the Matrix Fisher
 %   Distribution on SO(3)", 2017, http://arxiv.org/abs/1710.03746
 
-[U S V]=svd(F);
+[U S V]=psvd(F);
 B=zeros(4,4);
 B(1:3,1:3)=2*S-trace(S)*eye(3);
 B(4,4)=trace(S);
+
 [x accept_ratio]=sampBing(B,N);
 
 R=zeros(3,3,N);

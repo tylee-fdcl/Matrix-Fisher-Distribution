@@ -19,7 +19,11 @@ function [s FVAL NITER]=pdf_MF_M2S(d,s0)
 
 bool_scaled=1;
 if nargin < 2
-    s0=rand(3,1).*sign(d);
+    if norm(d) < 1e-6        
+        s0=zeros(3,1);
+    else
+        s0=rand(3,1).*sign(d);
+    end
 end
 
 s=s0;
@@ -28,7 +32,7 @@ alpha=0.05;
 nf=2*eps;
 
 NITER=0;
-MAX_ITER=100;
+MAX_ITER=200;
 
 sigma0=0.1;
 sigma1=0.5;
@@ -56,7 +60,7 @@ while nf > eps && NITER < MAX_ITER
     
     while norm(f_stack(end)) > (1-alpha*lambda)*norm(f) && NSUB_ITER < MAX_ITER 
         
-        N_SUBITER=N_SUBITER+1;
+        NSUB_ITER=NSUB_ITER+1;
         if length(lambda_stack) < 3
             lambda=sigma1;
         else
@@ -68,7 +72,7 @@ while nf > eps && NITER < MAX_ITER
             if poly_coff_2 > 0
                 poly_coff_1=1/(lam2-lam3)*(-lam3*(norm(f2)-norm(f))/lam2+lam2*(norm(f3)-norm(f))/lam3);
                 lambda_t=-poly_coff_1/2/poly_coff_2;
-                lambda=saturation(lambda_t,sigma0*lam3,sigma1*lam3)              
+                lambda=saturation(lambda_t,sigma0*lam3,sigma1*lam3);           
             else
                 lambda=sigma1*lam3;
             end
@@ -88,7 +92,7 @@ end
 FVAL=f_trial;
 
 if NITER == MAX_ITER || NSUB_ITER == MAX_ITER
-    disp('Warning: MAX iteration reached');
+    disp(['Warning: MAX iteration reached: d=' num2str(d')]);
 end
 
 end
