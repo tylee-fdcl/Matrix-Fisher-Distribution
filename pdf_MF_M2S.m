@@ -16,6 +16,8 @@ function [s FVAL NITER]=pdf_MF_M2S(d,s0)
 %   Distribution on SO(3)", 2017, http://arxiv.org/abs/1710.03746
 %   C. T. Kelly, "Iterative Methods For Linear And Nonlinear Equations,"
 %   SIAM, 1995, Section 8.3.1.
+%
+%   See also PDF_MF_M2S_APPROX
 
 bool_scaled=1;
 if nargin < 2
@@ -56,7 +58,7 @@ while nf > eps && NITER < MAX_ITER
     lambda_stack=stack3(lambda_stack,lambda);
     
     % polynomial line search: three-point parabolic method
-    NSUB_ITER=0;
+    N_SUBITER=0;
     
     while norm(f_stack(end)) > (1-alpha*lambda)*norm(f) && NSUB_ITER < MAX_ITER 
         
