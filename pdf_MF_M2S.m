@@ -58,9 +58,9 @@ while nf > eps && NITER < MAX_ITER
     lambda_stack=stack3(lambda_stack,lambda);
     
     % polynomial line search: three-point parabolic method
-    N_SUBITER=0;
+    NSUB_ITER=0;
     
-    while norm(f_stack(end)) > (1-alpha*lambda)*norm(f) && NSUB_ITER < MAX_ITER 
+    while norm(f_stack(:,end)) > (1-alpha*lambda)*norm(f) && NSUB_ITER < MAX_ITER 
         
         NSUB_ITER=NSUB_ITER+1;
         if length(lambda_stack) < 3
@@ -68,8 +68,8 @@ while nf > eps && NITER < MAX_ITER
         else
             lam2=lambda_stack(2);
             lam3=lambda_stack(3);
-            f2=f_stack(2);
-            f3=f_stack(3);
+            f2=f_stack(:,2);
+            f3=f_stack(:,3);
             poly_coff_2=1/lam2/lam3/(lam2-lam3)*(lam3*(norm(f2)-norm(f))-lam2*(norm(f3)-norm(f)));
             if poly_coff_2 > 0
                 poly_coff_1=1/(lam2-lam3)*(-lam3*(norm(f2)-norm(f))/lam2+lam2*(norm(f3)-norm(f))/lam3);
